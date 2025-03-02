@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import SkillCard from "@/components/SkillCard";
 import { Cloud, Code, Terminal, Settings } from "lucide-react";
 import { 
-  SiMicrosoftazure, SiAmazonaws, SiKubernetes, SiDocker, SiTerraform,
+  SiMicrosoftazure, SiKubernetes, SiDocker, SiTerraform,
   SiJenkins, SiGithub, SiAnsible, SiGrafana,
   SiPython, SiWindows, SiGnubash, SiJavascript, SiYaml 
 } from "react-icons/si";
@@ -14,7 +14,6 @@ export default function About() {
       icon: <Cloud />,
       skills: [
         { name: "Azure", icon: <SiMicrosoftazure /> },
-        { name: "AWS", icon: <SiAmazonaws /> },
         { name: "Kubernetes", icon: <SiKubernetes /> },
         { name: "Docker", icon: <SiDocker /> },
         { name: "Terraform", icon: <SiTerraform /> }
