@@ -31,7 +31,7 @@ export default function About() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.8 }}
         className="space-y-4"
       >
         <h1 className="text-3xl font-bold">About Me</h1>
@@ -51,7 +51,7 @@ export default function About() {
               key={skillSet.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.8, delay: index * 0.15 }}
             >
               <SkillCard {...skillSet} />
             </motion.div>

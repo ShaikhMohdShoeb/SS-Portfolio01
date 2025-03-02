@@ -14,9 +14,9 @@ export default function PageTransition({ children }: PageTransitionProps) {
       exit={{ opacity: 0, scale: 1.1 }}
       transition={{
         type: "spring",
-        stiffness: 300,
+        stiffness: 260,
         damping: 25,
-        duration: 0.5,
+        duration: 0.9,
       }}
     >
       {children}
