@@ -106,9 +106,14 @@ export default function Home() {
           {skillSets.map((skillSet, index) => (
             <motion.div
               key={skillSet.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial={{ opacity: 0, rotateY: 90 }}
+              whileInView={{ opacity: 1, rotateY: 0 }}
+              transition={{ 
+                duration: 0.6, 
+                delay: index * 0.1,
+                type: "spring",
+                stiffness: 100
+              }}
               viewport={{ once: true }}
             >
               <SkillCard {...skillSet} />
