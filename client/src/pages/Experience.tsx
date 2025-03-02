@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import TimelineItem from "@/components/TimelineItem";
 import CertificationCard from "@/components/CertificationCard";
-import { SiMicrosoftazure, SiAzuredevops, SiKubernetes } from "react-icons/si";
+import { SiMicrosoftazure, SiKubernetes } from "react-icons/si";
 
 export default function Experience() {
   const experiences = [
@@ -21,7 +21,7 @@ export default function Experience() {
       title: "DevOps Engineer",
       company: "Cloud Innovations Inc",
       date: "2018 - 2020",
-      logo: <SiAzuredevops />,
+      logo: <SiMicrosoftazure />,
       description: [
         "Developed and maintained CI/CD pipelines",
         "Implemented monitoring and logging solutions",

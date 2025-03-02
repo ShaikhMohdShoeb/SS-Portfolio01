@@ -3,8 +3,8 @@ import SkillCard from "@/components/SkillCard";
 import { Cloud, Code, Terminal, Settings } from "lucide-react";
 import { 
   SiMicrosoftazure, SiAmazonaws, SiKubernetes, SiDocker, SiTerraform,
-  SiAzuredevops, SiJenkins, SiGithub, SiAnsible, SiGrafana,
-  SiPython, SiPowershell, SiBash, SiJavascript, SiYaml 
+  SiJenkins, SiGithub, SiAnsible, SiGrafana,
+  SiPython, SiWindows, SiGnubash, SiJavascript, SiYaml 
 } from "react-icons/si";
 
 export default function About() {
@@ -24,7 +24,7 @@ export default function About() {
       title: "DevOps Tools",
       icon: <Settings />,
       skills: [
-        { name: "Azure DevOps", icon: <SiAzuredevops /> },
+        { name: "Azure DevOps", icon: <SiMicrosoftazure /> },
         { name: "Jenkins", icon: <SiJenkins /> },
         { name: "Git", icon: <SiGithub /> },
         { name: "Ansible", icon: <SiAnsible /> },
@@ -36,8 +36,8 @@ export default function About() {
       icon: <Code />,
       skills: [
         { name: "Python", icon: <SiPython /> },
-        { name: "PowerShell", icon: <SiPowershell /> },
-        { name: "Bash", icon: <SiBash /> },
+        { name: "PowerShell", icon: <SiWindows /> },
+        { name: "Bash", icon: <SiGnubash /> },
         { name: "JavaScript", icon: <SiJavascript /> },
         { name: "YAML", icon: <SiYaml /> }
       ],
