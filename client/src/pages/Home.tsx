@@ -35,12 +35,9 @@ export default function Home() {
       <div className="flex min-h-[60vh] items-center">
         <div className="mx-auto max-w-3xl text-center">
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ 
-              duration: 1.4,
-              ease: "easeInOut" 
-            }}
+            transition={{ duration: 0.5 }}
             className="text-4xl font-bold tracking-tight sm:text-6xl"
           >
             Hi, I'm{" "}
@@ -49,13 +46,9 @@ export default function Home() {
             </span>
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ 
-              duration: 1.6, 
-              delay: 0.3,
-              ease: "easeOut" 
-            }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 text-lg text-muted-foreground"
           >
             Cloud & DevOps Engineer with 5+ years of experience specializing in Azure

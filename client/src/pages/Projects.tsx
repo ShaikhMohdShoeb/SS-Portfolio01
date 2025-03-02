@@ -32,12 +32,9 @@ export default function Projects() {
   return (
     <div className="space-y-12">
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ 
-          duration: 1.5,
-          ease: [0.6, 0.05, 0.01, 0.9]
-        }}
+        transition={{ duration: 0.5 }}
       >
         <h1 className="text-3xl font-bold">Projects</h1>
         <p className="mt-4 text-muted-foreground">
@@ -49,13 +46,9 @@ export default function Projects() {
         {projects.map((project, index) => (
           <motion.div
             key={project.title}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ 
-              duration: 1.2, 
-              delay: index * 0.2,
-              ease: "easeOut"
-            }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <ProjectCard {...project} />
           </motion.div>
