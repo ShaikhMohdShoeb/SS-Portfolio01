@@ -1,9 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
+interface Skill {
+  name: string;
+  icon?: React.ReactNode;
+}
+
 interface SkillCardProps {
   title: string;
-  skills: string[];
+  skills: (Skill | string)[];
   icon: React.ReactNode;
 }
 
@@ -20,14 +25,20 @@ export default function SkillCard({ title, skills, icon }: SkillCardProps) {
             <h3 className="text-lg font-semibold">{title}</h3>
           </div>
           <div className="flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full bg-primary/10 px-3 py-1 text-sm text-primary"
-              >
-                {skill}
-              </span>
-            ))}
+            {skills.map((skill, index) => {
+              const skillName = typeof skill === 'string' ? skill : skill.name;
+              const skillIcon = typeof skill === 'string' ? null : skill.icon;
+
+              return (
+                <span
+                  key={skillName}
+                  className="rounded-full bg-primary/10 px-3 py-1 text-sm text-primary flex items-center gap-2"
+                >
+                  {skillIcon && <span className="text-lg">{skillIcon}</span>}
+                  {skillName}
+                </span>
+              );
+            })}
           </div>
         </CardContent>
       </Card>
