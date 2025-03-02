@@ -1,5 +1,8 @@
 import { ReactNode } from "react";
+import { AnimatePresence } from "framer-motion";
+import { useLocation } from "wouter";
 import Navbar from "./Navbar";
+import PageTransition from "./PageTransition";
 import { motion } from "framer-motion";
 
 interface LayoutProps {
@@ -7,17 +10,18 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
+  const [location] = useLocation();
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <motion.main
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="container mx-auto px-4 py-8"
-      >
-        {children}
-      </motion.main>
+      <AnimatePresence mode="wait">
+        <PageTransition key={location}>
+          <main className="container mx-auto px-4 py-8">
+            {children}
+          </main>
+        </PageTransition>
+      </AnimatePresence>
     </div>
   );
 }
