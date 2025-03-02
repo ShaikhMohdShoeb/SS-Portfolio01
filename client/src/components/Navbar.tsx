@@ -18,9 +18,16 @@ export default function Navbar() {
       <div className="container flex h-16 items-center">
         <Link href="/">
           <a className="mr-8 flex items-center space-x-2">
-            <span className="font-black text-3xl bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent tracking-tighter">
+            <motion.span 
+              whileHover={{ scale: 1.05 }}
+              className="relative font-black text-4xl bg-gradient-to-br from-primary via-primary/80 to-primary/50 bg-clip-text text-transparent tracking-tighter hover:tracking-tight transition-all duration-300 select-none"
+              style={{ 
+                textShadow: '0 0 30px rgba(var(--primary), 0.3)',
+                WebkitTextStroke: '1px rgba(var(--primary), 0.1)'
+              }}
+            >
               SS
-            </span>
+            </motion.span>
           </a>
         </Link>
         <div className="flex gap-6">
