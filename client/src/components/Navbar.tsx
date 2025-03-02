@@ -18,7 +18,9 @@ export default function Navbar() {
       <div className="container flex h-16 items-center">
         <Link href="/">
           <a className="mr-8 flex items-center space-x-2">
-            <span className="text-xl font-bold">Shoeb Shaikh</span>
+            <span className="font-black text-3xl bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent tracking-tighter">
+              SS
+            </span>
           </a>
         </Link>
         <div className="flex gap-6">
