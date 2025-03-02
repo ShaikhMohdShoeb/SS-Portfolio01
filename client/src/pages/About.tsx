@@ -1,46 +1,23 @@
 import { motion } from "framer-motion";
 import SkillCard from "@/components/SkillCard";
 import { Cloud, Code, Terminal, Settings } from "lucide-react";
-import { 
-  SiMicrosoft, SiAws, SiKubernetes, SiDocker, SiTerraform,
-  SiJenkins, SiGithub, SiAnsible, SiGrafana,
-  SiPython, SiWindows, SiGnubash, SiJavascript, SiYaml 
-} from "react-icons/si";
 
 export default function About() {
   const skillSets = [
     {
       title: "Cloud Services",
       icon: <Cloud />,
-      skills: [
-        { name: "Azure", icon: <SiMicrosoft /> },
-        { name: "AWS", icon: <SiAws /> },
-        { name: "Kubernetes", icon: <SiKubernetes /> },
-        { name: "Docker", icon: <SiDocker /> },
-        { name: "Terraform", icon: <SiTerraform /> }
-      ],
+      skills: ["Azure", "AWS", "Kubernetes", "Docker", "Terraform"],
     },
     {
       title: "DevOps Tools",
       icon: <Settings />,
-      skills: [
-        { name: "Azure DevOps", icon: <SiMicrosoft /> },
-        { name: "Jenkins", icon: <SiJenkins /> },
-        { name: "Git", icon: <SiGithub /> },
-        { name: "Ansible", icon: <SiAnsible /> },
-        { name: "Grafana", icon: <SiGrafana /> }
-      ],
+      skills: ["Azure DevOps", "Jenkins", "Git", "Ansible", "Prometheus"],
     },
     {
       title: "Programming",
       icon: <Code />,
-      skills: [
-        { name: "Python", icon: <SiPython /> },
-        { name: "PowerShell", icon: <SiWindows /> },
-        { name: "Bash", icon: <SiGnubash /> },
-        { name: "JavaScript", icon: <SiJavascript /> },
-        { name: "YAML", icon: <SiYaml /> }
-      ],
+      skills: ["Python", "PowerShell", "Bash", "JavaScript", "YAML"],
     },
     {
       title: "Infrastructure",
