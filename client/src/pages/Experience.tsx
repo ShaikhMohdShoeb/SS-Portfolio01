@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import TimelineItem from "@/components/TimelineItem";
 import CertificationCard from "@/components/CertificationCard";
-import { SiMicrosoft, SiKubernetes } from "react-icons/si";
+import { SiMicrosoftazure, SiKubernetes } from "react-icons/si";
 
 export default function Experience() {
   const experiences = [
@@ -9,7 +9,7 @@ export default function Experience() {
       title: "Senior Cloud & DevOps Engineer",
       company: "TechCorp Solutions",
       date: "2020 - Present",
-      logo: <SiMicrosoft />,
+      logo: <SiMicrosoftazure />,
       description: [
         "Led cloud infrastructure initiatives using Azure services",
         "Implemented CI/CD pipelines with Azure DevOps",
@@ -21,7 +21,7 @@ export default function Experience() {
       title: "DevOps Engineer",
       company: "Cloud Innovations Inc",
       date: "2018 - 2020",
-      logo: <SiMicrosoft />,
+      logo: <SiMicrosoftazure />,
       description: [
         "Developed and maintained CI/CD pipelines",
         "Implemented monitoring and logging solutions",
@@ -36,13 +36,13 @@ export default function Experience() {
       title: "Microsoft Certified: Azure Solutions Architect Expert",
       issuer: "Microsoft",
       date: "2023",
-      logo: <SiMicrosoft />,
+      logo: <SiMicrosoftazure />,
     },
     {
       title: "Microsoft Certified: DevOps Engineer Expert",
       issuer: "Microsoft",
       date: "2022",
-      logo: <SiMicrosoft />,
+      logo: <SiMicrosoftazure />,
     },
     {
       title: "Certified Kubernetes Administrator (CKA)",
