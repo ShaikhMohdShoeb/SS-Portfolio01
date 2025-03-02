@@ -6,12 +6,14 @@ interface CertificationCardProps {
   title: string;
   issuer: string;
   date: string;
+  icon?: React.ReactNode;
 }
 
 export default function CertificationCard({
   title,
   issuer,
   date,
+  icon,
 }: CertificationCardProps) {
   return (
     <motion.div
@@ -20,7 +22,10 @@ export default function CertificationCard({
     >
       <Card className="h-full">
         <CardContent className="flex flex-col gap-2 p-6">
-          <h3 className="font-semibold">{title}</h3>
+          <div className="flex items-center gap-2">
+            {icon && <div>{icon}</div>}
+            <h3 className="font-semibold">{title}</h3>
+          </div>
           <p className="text-sm text-muted-foreground">{issuer}</p>
           <Badge variant="secondary" className="w-fit">
             {date}

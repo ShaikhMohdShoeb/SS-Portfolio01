@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import TimelineItem from "@/components/TimelineItem";
 import CertificationCard from "@/components/CertificationCard";
+import { Cloud } from "lucide-react";
 
 export default function Experience() {
   const experiences = [
@@ -43,6 +44,12 @@ export default function Experience() {
       title: "Certified Kubernetes Administrator (CKA)",
       issuer: "Cloud Native Computing Foundation",
       date: "2021",
+    },
+    {
+      title: "Google Associate Cloud Engineer",
+      issuer: "Google Cloud",
+      date: "2022",
+      icon: <Cloud className="h-5 w-5 text-blue-500" />
     },
   ];
 
