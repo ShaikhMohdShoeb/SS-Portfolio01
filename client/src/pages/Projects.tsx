@@ -48,7 +48,7 @@ export default function Projects() {
             key={project.title}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.15 }}
+            transition={{ duration: 1.0, delay: index * 0.2 }}
           >
             <ProjectCard {...project} />
           </motion.div>

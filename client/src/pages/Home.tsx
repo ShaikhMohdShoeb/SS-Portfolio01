@@ -37,7 +37,7 @@ export default function Home() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1.0 }}
             className="text-4xl font-bold tracking-tight sm:text-6xl"
           >
             Hi, I'm{" "}
@@ -48,7 +48,7 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 1.0, delay: 0.2 }}
             className="mt-6 text-lg text-muted-foreground"
           >
             Cloud & DevOps Engineer with 5+ years of experience specializing in Azure
@@ -57,7 +57,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 1.0, delay: 0.4 }}
             className="mt-10 flex justify-center gap-4"
           >
             <Link href="/experience">
@@ -78,7 +78,7 @@ export default function Home() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1.0 }}
         viewport={{ once: true }}
         className="space-y-8"
       >
@@ -96,7 +96,7 @@ export default function Home() {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 1.0 }}
           viewport={{ once: true }}
           className="text-3xl font-bold text-center"
         >
