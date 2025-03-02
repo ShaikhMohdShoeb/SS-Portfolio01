@@ -69,7 +69,18 @@ export default function Experience() {
         <h2 className="text-2xl font-semibold">Certifications</h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {certifications.map((certification) => (
-            <CertificationCard key={certification.title} {...certification} />
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ 
+                duration: 1.4, 
+                //delay: index * 0.25,  //index is not available in this scope.
+                ease: [0.25, 0.1, 0.25, 1.0] 
+              }}
+              key={certification.title}
+            >
+              <CertificationCard key={certification.title} {...certification} />
+            </motion.div>
           ))}
         </div>
       </div>
