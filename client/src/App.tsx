@@ -4,7 +4,6 @@ import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import Layout from "@/components/Layout";
 import Home from "@/pages/Home";
-import About from "@/pages/About";
 import Experience from "@/pages/Experience";
 import Projects from "@/pages/Projects";
 import Contact from "@/pages/Contact";
@@ -15,7 +14,6 @@ function Router() {
     <Layout>
       <Switch>
         <Route path="/" component={Home} />
-        <Route path="/about" component={About} />
         <Route path="/experience" component={Experience} />
         <Route path="/projects" component={Projects} />
         <Route path="/contact" component={Contact} />
