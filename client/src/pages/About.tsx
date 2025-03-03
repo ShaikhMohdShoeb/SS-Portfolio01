@@ -12,22 +12,46 @@ export default function About() {
     {
       title: "Cloud Services",
       icon: <Cloud />,
-      skills: ["Azure", "AWS", "Kubernetes", "Docker", "Terraform"],
+      skills: [
+        { name: "Azure", proficiency: 95 },
+        { name: "AWS", proficiency: 85 },
+        { name: "Kubernetes", proficiency: 80 },
+        { name: "Docker", proficiency: 90 },
+        { name: "Terraform", proficiency: 85 }
+      ],
     },
     {
       title: "DevOps Tools",
       icon: <Settings />,
-      skills: ["Azure DevOps", "Jenkins", "Git", "Ansible", "Prometheus"],
+      skills: [
+        { name: "Azure DevOps", proficiency: 90 },
+        { name: "Jenkins", proficiency: 80 },
+        { name: "Git", proficiency: 95 },
+        { name: "Ansible", proficiency: 85 },
+        { name: "Prometheus", proficiency: 75 }
+      ],
     },
     {
       title: "Programming",
       icon: <Code />,
-      skills: ["Python", "PowerShell", "Bash", "JavaScript", "YAML"],
+      skills: [
+        { name: "Python", proficiency: 90 },
+        { name: "PowerShell", proficiency: 85 },
+        { name: "Bash", proficiency: 90 },
+        { name: "JavaScript", proficiency: 80 },
+        { name: "YAML", proficiency: 95 }
+      ],
     },
     {
       title: "Infrastructure",
       icon: <Terminal />,
-      skills: ["IaC", "CI/CD", "Monitoring", "Security", "Automation"],
+      skills: [
+        { name: "IaC", proficiency: 90 },
+        { name: "CI/CD", proficiency: 95 },
+        { name: "Monitoring", proficiency: 85 },
+        { name: "Security", proficiency: 80 },
+        { name: "Automation", proficiency: 90 }
+      ],
     },
   ];
 
