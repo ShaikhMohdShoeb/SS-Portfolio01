@@ -3,6 +3,11 @@ import SkillCard from "@/components/SkillCard";
 import { Cloud, Code, Terminal, Settings } from "lucide-react";
 
 export default function About() {
+  // Add a subtle background pattern
+  const bgPattern = {
+    backgroundImage: `radial-gradient(rgba(var(--primary-rgb), 0.05) 1px, transparent 1px)`,
+    backgroundSize: '20px 20px',
+  };
   const skillSets = [
     {
       title: "Cloud Services",
@@ -27,7 +32,7 @@ export default function About() {
   ];
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-12 py-8 px-4 rounded-lg" style={bgPattern}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -35,10 +40,10 @@ export default function About() {
         className="space-y-4"
       >
         <h1 className="text-3xl font-bold">About Me</h1>
-        <p className="max-w-3xl text-muted-foreground">
-          I am a Cloud & DevOps Engineer with extensive experience in designing,
+        <p className="max-w-2xl mx-auto text-muted-foreground leading-relaxed">
+          I am a <span className="text-primary font-medium">Cloud & DevOps Engineer</span> with extensive experience in designing,
           implementing, and managing cloud infrastructure solutions. My expertise
-          lies in Azure services and DevOps practices, helping organizations
+          lies in <span className="text-primary font-medium">Azure services</span> and <span className="text-primary font-medium">DevOps practices</span>, helping organizations
           streamline their development processes and optimize cloud operations.
         </p>
       </motion.div>

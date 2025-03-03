@@ -33,7 +33,13 @@ export default function Home() {
     <div className="space-y-20 py-10">
       {/* Hero Section */}
       <div className="flex min-h-[60vh] items-center">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-3xl text-center relative">
+          <div className="absolute -left-32 top-1/2 transform -translate-y-1/2 hidden lg:block">
+            <div className="w-24 h-24 rounded-full bg-gradient-to-r from-primary/30 to-primary flex items-center justify-center overflow-hidden">
+              {/* Replace with your actual image if available */}
+              <span className="text-4xl font-bold text-white">S</span>
+            </div>
+          </div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -41,7 +47,7 @@ export default function Home() {
             className="text-4xl font-bold tracking-tight sm:text-6xl"
           >
             Hi, I'm{" "}
-            <span className="bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent font-extrabold">
               Shoeb Shaikh
             </span>
           </motion.h1>
@@ -57,7 +63,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.0, delay: 0.4 }}
-            className="mt-10 flex justify-center gap-4"
+            className="mt-10 flex flex-wrap justify-center gap-4"
           >
             <Link href="/experience">
               <Button size="lg">

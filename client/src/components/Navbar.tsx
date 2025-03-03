@@ -56,30 +56,15 @@ export default function Navbar() {
         <div className="flex gap-6">
           {links.map((link) => (
             <Link key={link.href} href={link.href}>
-              <a className="relative">
-                <span
-                  className={cn(
-                    "text-sm transition-colors hover:text-primary",
+              <a className={cn(
+                    "text-sm transition-colors hover:text-primary px-3 py-2 duration-200",
                     location === link.href
                       ? "text-primary"
                       : "text-muted-foreground"
                   )}
                 >
                   {link.label}
-                </span>
-                {location === link.href && (
-                  <motion.div
-                    layoutId="navbar-indicator"
-                    className="absolute -bottom-[1px] left-0 right-0 h-[2px] bg-primary"
-                    initial={false}
-                    transition={{
-                      type: "spring",
-                      stiffness: 350,
-                      damping: 30,
-                    }}
-                  />
-                )}
-              </a>
+                </a>
             </Link>
           ))}
         </div>

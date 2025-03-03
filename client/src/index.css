@@ -1,3 +1,10 @@
+
+@layer base {
+  :root {
+    --primary-rgb: 53, 85, 255; /* Approximately matches hsl(230, 100%, 67%) */
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
