@@ -1,10 +1,9 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
 interface SkillCardProps {
   title: string;
-  skills: Array<{ name: string; proficiency: number }>;
+  skills: string[];
   icon: React.ReactNode;
 }
 
@@ -20,22 +19,14 @@ export default function SkillCard({ title, skills, icon }: SkillCardProps) {
             <div className="text-primary text-xl">{icon}</div>
             <h3 className="text-lg font-semibold">{title}</h3>
           </div>
-          <div className="space-y-3">
+          <div className="flex flex-wrap gap-2">
             {skills.map((skill) => (
-              <div key={skill.name} className="space-y-1">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm font-medium">{skill.name}</span>
-                  <span className="text-xs text-muted-foreground">{skill.proficiency}%</span>
-                </div>
-                <div className="h-2 w-full bg-primary/10 rounded-full overflow-hidden">
-                  <motion.div 
-                    className="h-full bg-primary rounded-full"
-                    initial={{ width: 0 }}
-                    animate={{ width: `${skill.proficiency}%` }}
-                    transition={{ duration: 1, delay: 0.2 }}
-                  />
-                </div>
-              </div>
+              <span
+                key={skill}
+                className="rounded-full bg-primary/10 px-3 py-1 text-sm text-primary"
+              >
+                {skill}
+              </span>
             ))}
           </div>
         </CardContent>
