@@ -54,6 +54,14 @@ export default function Home() {
             Cloud & DevOps Engineer with 5+ years of experience specializing in Azure
             Infrastructure and Azure DevOps
           </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.0, delay: 0.3 }}
+            className="mt-4 text-md text-muted-foreground"
+          >
+            I specialize in Azure Infrastructure & DevOps, helping businesses streamline cloud operations.
+          </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -65,6 +73,11 @@ export default function Home() {
                 See My Experience <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
+            <Link href="/about">
+              <Button variant="secondary" size="lg">
+                Learn More About Me
+              </Button>
+            </Link>
             <Link href="/contact">
               <Button variant="outline" size="lg">
                 Get in Touch
@@ -74,22 +87,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* About Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.0 }}
-        viewport={{ once: true }}
-        className="space-y-8"
-      >
-        <h2 className="text-3xl font-bold text-center">About Me</h2>
-        <p className="max-w-3xl mx-auto text-center text-muted-foreground">
-          I am a Cloud & DevOps Engineer with extensive experience in designing,
-          implementing, and managing cloud infrastructure solutions. My expertise
-          lies in Azure services and DevOps practices, helping organizations
-          streamline their development processes and optimize cloud operations.
-        </p>
-      </motion.div>
+      
 
       {/* Skills Section */}
       <div className="space-y-8">
