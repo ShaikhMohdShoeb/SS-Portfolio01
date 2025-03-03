@@ -51,15 +51,6 @@ export default function Home() {
             transition={{ duration: 1.0, delay: 0.2 }}
             className="mt-6 text-lg text-muted-foreground"
           >
-            Cloud & DevOps Engineer with 5+ years of experience specializing in Azure
-            Infrastructure and Azure DevOps
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, delay: 0.3 }}
-            className="mt-4 text-md text-muted-foreground"
-          >
             I specialize in Azure Infrastructure & DevOps, helping businesses streamline cloud operations.
           </motion.p>
           <motion.div
