@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import TimelineItem from "@/components/TimelineItem";
 import CertificationCard from "@/components/CertificationCard";
-import { Cloud } from "lucide-react";
+import { Cloud, Award } from "lucide-react";
+import { Card } from "@/components/ui/card";
 
 export default function Experience() {
   const experiences = [
@@ -62,6 +63,25 @@ export default function Experience() {
       >
         <h1 className="text-3xl font-bold">Experience</h1>
       </motion.div>
+
+      <div className="space-y-8">
+        <h2 className="text-2xl font-semibold flex items-center gap-2">
+          <Award className="h-6 w-6 text-primary" />
+          Key Achievement
+        </h2>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Card className="p-6">
+            <h3 className="text-xl font-semibold mb-3">Medical Imaging Systems Automation</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Successfully improved medical imaging systems by creating automatic processes that accelerated installation and reduced mistakes using ANSIBLE. This resulted in an <span className="font-semibold">80% reduction in setup time</span>, a <span className="font-semibold">70% improvement in efficiency</span>, and a <span className="font-semibold">40% reduction in errors</span>.
+            </p>
+          </Card>
+        </motion.div>
+      </div>
 
       <div className="space-y-8">
         <h2 className="text-2xl font-semibold">Work History</h2>
