@@ -86,6 +86,61 @@ export default function Home() {
         </div>
       </div>
 
+      {/* About Me Section */}
+      <div className="mx-auto max-w-4xl space-y-12">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.0 }}
+          viewport={{ once: true }}
+          className="text-3xl font-bold text-center"
+        >
+          About Me
+        </motion.h2>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.0, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="space-y-8"
+        >
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            I administrate/manage and automate Azure environments (IaaS, PaaS) while streamlining DevOps workflows. 
+            Proficient in Azure infra, and tools like Ansible for configuration management, GitHub Actions, Azure DevOps for CI/CD, and Terraform for IaC.
+          </p>
+
+          <div className="space-y-8">
+            <h3 className="text-2xl font-semibold">Key Expertise</h3>
+            
+            <div className="space-y-6">
+              <div>
+                <h4 className="text-xl font-semibold text-primary mb-2">Azure Infrastructure</h4>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  <li>Designed VNets (peering, NSGs), optimized VMs, and enforced compliance via Azure Policy/RBAC.</li>
+                  <li>Cut cloud costs by 30%+ via subscription governance, reserved instances, and Azure Hybrid Benefit.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-semibold text-primary mb-2">Security & Identity</h4>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  <li>Deployed Azure AD solutions (conditional access, MFA) and secured networks with Firewall/VPN.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-xl font-semibold text-primary mb-2">DevOps Automation</h4>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  <li>Built CI/CD pipelines (GitHub Actions, Azure DevOps) for IaC and app deployments.</li>
+                  <li>Automated 40% of manual tasks via Ansible; leveraged Azure Monitor for proactive ops.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
       {/* Skills Section */}
       <div className="space-y-8">
         <motion.h2
