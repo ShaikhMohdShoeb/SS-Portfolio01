@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import SkillCard from "@/components/SkillCard";
 import { Cloud, Code, Terminal, Settings } from "lucide-react";
 import Lottie from "lottie-react";
-import cloudAnimation from "@/assets/animations/cloud.json";
+import cloudAnimation2 from "@/assets/animations/cloud-2.json";
 import { useAnimationStore } from "@/lib/stores/animation";
 
 export default function Home() {
@@ -38,9 +38,9 @@ export default function Home() {
     <div className="space-y-20 py-10 relative">
       {/* Cloud Animation */}
       {enabled && (
-        <div className="absolute top-0 right-0 w-48 h-48 opacity-80">
+        <div className="absolute left-1/2 transform -translate-x-1/2 -top-8 w-56 h-56 opacity-90">
           <Lottie
-            animationData={cloudAnimation}
+            animationData={cloudAnimation2}
             loop
             autoplay
             className="w-full h-full"
