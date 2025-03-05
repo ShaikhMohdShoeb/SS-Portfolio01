@@ -25,7 +25,7 @@ export default defineConfig({
         ]
       : []),
   ],
-  base: process.env.NODE_ENV === 'production' ? `/${repoName}/` : '/',
+  base: '/SS-Portfolio01/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "client", "src"),
