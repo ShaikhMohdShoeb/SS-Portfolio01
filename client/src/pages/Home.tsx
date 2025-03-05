@@ -111,19 +111,19 @@ export default function Home() {
     {
       name: "Email",
       icon: <Mail className="h-6 w-6" />,
-      href: "mailto:contact@shoebshaikh.dev",
+      href: "mailto:shaikh.shoeb07@outlook.com",
       description: "Drop me an email",
     },
     {
       name: "LinkedIn",
       icon: <Linkedin className="h-6 w-6" />,
-      href: "https://linkedin.com/in/shoebshaikh",
+      href: "https://linkedin.com/in/shaikh-mohd-shoeb",
       description: "Connect with me on LinkedIn",
     },
     {
       name: "GitHub",
       icon: <Github className="h-6 w-6" />,
-      href: "https://github.com/shoebshaikh",
+      href: "https://github.com/ShaikhMohdShoeb",
       description: "Check out my code",
     },
   ];
