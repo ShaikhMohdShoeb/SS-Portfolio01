@@ -161,7 +161,7 @@ export default function Home() {
     <div className="space-y-32 py-10 relative overflow-hidden">
       {/* Cloud Animation */}
       {enabled && (
-        <div className="absolute left-1/2 transform -translate-x-1/2 -top-8 w-56 h-56 opacity-90">
+        <div className="absolute left-1/2 transform -translate-x-1/2 top-32 w-40 h-40 opacity-90 z-0">
           <Lottie
             animationData={cloudAnimation2}
             loop
@@ -173,7 +173,7 @@ export default function Home() {
       )}
       
       {/* Hero Section */}
-      <div className="flex min-h-[60vh] items-center">
+      <div className="flex min-h-[60vh] items-center px-4">
         <div className="mx-auto max-w-3xl text-center relative">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -190,7 +190,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.0, delay: 0.2 }}
-            className="mt-6 text-lg text-muted-foreground"
+            className="mt-6 text-lg text-muted-foreground px-4"
           >
             I specialize in Azure Infrastructure & DevOps, helping businesses streamline cloud operations.
           </motion.p>
@@ -198,7 +198,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.0, delay: 0.4 }}
-            className="mt-10 flex flex-wrap justify-center gap-4"
+            className="mt-10 flex flex-wrap justify-center gap-4 px-4"
           >
             <Link href="/about">
               <Button size="lg" className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary">
@@ -214,9 +214,9 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ 
-          duration: 0.8, 
+          duration: 0.6, 
           ease: "easeOut",
-          delay: 0.2
+          delay: 0.4
         }}
         viewport={{ once: true }}
         className="mx-auto max-w-4xl space-y-16"
@@ -249,7 +249,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ 
-          duration: 0.8, 
+          duration: 0.6, 
           ease: "easeOut",
           delay: 0.4
         }}
@@ -285,9 +285,9 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ 
-          duration: 0.8, 
+          duration: 0.6, 
           ease: "easeOut",
-          delay: 0.6
+          delay: 0.4
         }}
         viewport={{ once: true }}
         className="mx-auto max-w-4xl space-y-16"
@@ -301,62 +301,14 @@ export default function Home() {
         <TechStack />
       </motion.div>
 
-      {/* Experience Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ 
-          duration: 0.8, 
-          ease: "easeOut",
-          delay: 0.8
-        }}
-        viewport={{ once: true }}
-        className="mx-auto max-w-4xl space-y-16"
-      >
-        <SectionHeader 
-          title="Experience" 
-          icon={Briefcase}
-          description="Professional journey and roles that have shaped my expertise"
-        />
-        
-        <div className="space-y-6">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ 
-                duration: 0.6, 
-                ease: "easeOut",
-                delay: 0.2 * (index + 1)
-              }}
-              viewport={{ once: true }}
-            >
-              <Card className="p-6 hover:bg-accent/20 transition-colors duration-300">
-                <div className="flex justify-between items-center mb-3">
-                  <h3 className="text-lg font-semibold text-primary">{exp.title}</h3>
-                  <span className="text-sm text-muted-foreground">{exp.date}</span>
-                </div>
-                <p className="text-muted-foreground">{exp.company}</p>
-                <ul className="list-disc list-inside mt-2 text-sm text-muted-foreground space-y-1">
-                  {exp.description.map((resp, i) => (
-                    <li key={i}>{resp}</li>
-                  ))}
-                </ul>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-
       {/* Projects Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ 
-          duration: 0.8, 
+          duration: 0.6, 
           ease: "easeOut",
-          delay: 1.0
+          delay: 0.4
         }}
         viewport={{ once: true }}
         className="mx-auto max-w-4xl space-y-16"
@@ -404,9 +356,9 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ 
-          duration: 0.8, 
+          duration: 0.6, 
           ease: "easeOut",
-          delay: 1.2
+          delay: 0.4
         }}
         viewport={{ once: true }}
         className="mx-auto max-w-4xl space-y-16"
@@ -445,9 +397,9 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ 
-          duration: 0.8, 
+          duration: 0.6, 
           ease: "easeOut",
-          delay: 1.4
+          delay: 0.4
         }}
         viewport={{ once: true }}
         className="mx-auto max-w-4xl space-y-16"
