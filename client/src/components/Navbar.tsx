@@ -3,23 +3,20 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Settings } from "lucide-react";
 
-// Get base URL from Vite
-const base = import.meta.env.BASE_URL;
-
 export default function Navbar() {
   const [location] = useLocation();
 
   const links = [
-    { href: base || "/", label: "Home" },
-    { href: `${base}experience`, label: "Experience" },
-    { href: `${base}projects`, label: "Projects" },
-    { href: `${base}contact`, label: "Contact" },
+    { href: "/", label: "Home" },
+    { href: "/experience", label: "Experience" },
+    { href: "/projects", label: "Projects" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <Link href={base || "/"}>
+        <Link href="/">
           <a className="mr-8 flex items-center space-x-3 group">
             <motion.div
               whileHover={{ 

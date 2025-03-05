@@ -8,9 +8,6 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-// Get the repository name from package.json or environment variable
-const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] || 'portfolio-01';
-
 export default defineConfig({
   plugins: [
     react(),
@@ -25,7 +22,6 @@ export default defineConfig({
         ]
       : []),
   ],
-  base: '/SS-Portfolio01/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "client", "src"),
