@@ -7,6 +7,14 @@
     <meta name="keywords" content="DevOps Engineer, Azure Infrastructure, Cloud Engineering, Automation, CI/CD, IaC" />
     <title>DevOps by Shoeb | Azure Infrastructure & Automation</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>" />
+    <script>
+      // Redirect 404s to index.html
+      (function() {
+        if (window.location.pathname !== '/' && !window.location.pathname.endsWith('.html')) {
+          window.location.replace(window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/') + '/#' + window.location.pathname);
+        }
+      })();
+    </script>
   </head>
   <body>
     <!-- Root element where React will mount the app -->
