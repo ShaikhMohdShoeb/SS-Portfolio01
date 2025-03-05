@@ -1,4 +1,4 @@
-import { Switch, Route, Router as WouterRouter } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
@@ -11,43 +11,35 @@ import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
 import React from 'react';
 
-// Get base path from Vite's import.meta.env
+// Get the base URL from Vite
 const base = import.meta.env.BASE_URL;
 
-// Use hash router for GitHub Pages
-const useHashLocation = () => {
-  const [loc, setLoc] = React.useState(window.location.hash.slice(1) || "/");
+// Custom hook for handling base path
+const useBasePath = () => {
+  const [location, setLocation] = useLocation();
 
-  React.useEffect(() => {
-    const handler = () => {
-      const hash = window.location.hash.slice(1) || "/";
-      setLoc(hash);
-    };
+  // Remove base path from location
+  const currentLocation = location.replace(base, '') || '/';
 
-    window.addEventListener("hashchange", handler);
-    return () => window.removeEventListener("hashchange", handler);
-  }, []);
-
+  // Add base path when navigating
   const navigate = (to: string) => {
-    window.location.hash = to;
+    setLocation(base + to);
   };
 
-  return [loc, navigate] as const;
+  return [currentLocation, navigate] as const;
 };
 
 function Router() {
   return (
     <Layout>
-      <WouterRouter hook={useHashLocation}>
-        <Switch>
-          <Route path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/experience" component={Experience} />
-          <Route path="/projects" component={Projects} />
-          <Route path="/contact" component={Contact} />
-          <Route component={NotFound} />
-        </Switch>
-      </WouterRouter>
+      <Switch hook={useBasePath}>
+        <Route path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/experience" component={Experience} />
+        <Route path="/projects" component={Projects} />
+        <Route path="/contact" component={Contact} />
+        <Route component={NotFound} />
+      </Switch>
     </Layout>
   );
 }
